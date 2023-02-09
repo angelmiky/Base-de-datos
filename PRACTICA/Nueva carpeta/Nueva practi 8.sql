@@ -1,0 +1,46 @@
+
+create table Columna (
+NIF varchar(10),
+NOMBRE varchar(20),
+DIRECCION varchar(20),
+POBLACION varchar(20),
+PROVINCIA varchar(20),
+CODPOSTAL varchar(5)
+);
+rename table Columna to TIENDAS;
+alter table TIENDAS
+add PRIMARY KEY(NIF);
+UPDATE TIENDAS 
+SET PROVINCIA = UPPER (PROVINCIA);
+ALTER TABLE TIENDAS MODIFY NOMBRE varchar(30) not null;
+select * from TIENDAS;
+DESCRIBE TIENDAS;
+
+create table FABRICANTES(
+COD_FABRICANTE int(3),
+NOMBRE varchar(15),
+PAIS varchar(15)
+);
+alter table FABRICANTES
+add primary key(COD_FABRICANTE);
+UPDATE FABRICANTES
+SET NOMBRE = UPPER (NOMBRE); 
+UPDATE FABRICANTES
+SET PAIS = UPPER (PAIS); 
+SELECT * FROM FABRICANTES;
+DESCRIBE FABRICANTES;
+
+create table ARTICULOS(
+ARTICULO varchar(20),
+COD_FABRICANTE int(3),
+PESO int(3),
+CATEGORIA varchar(10),
+PRECIO_VENTA int(10),
+PRECIO_COSTOS int(6),
+EXISTENCIAS int (5)
+);
+alter table ARTICULOS
+add primary key(ARTICULO, COD_FABRICANTE, PESO, CATEGORIA);
+alter table ARTICULOS
+add foreign key (COD_FABRICANTE) references FABRICANTES(COD_FABRICANTE);
+

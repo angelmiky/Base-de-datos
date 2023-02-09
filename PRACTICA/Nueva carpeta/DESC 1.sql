@@ -1,0 +1,1 @@
+SELECT * from country where LifeExpectancy>70 Order by name desc
