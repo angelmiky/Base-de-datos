@@ -1,0 +1,18 @@
+
+-- Carga el archivo .sql adjunto
+-- Genera un script las siguientes consultas:
+-- Modelos de vehículos TDI
+-- Modelos de la marca 'Audi' y de la marca 'Seat' ordenado por Marca y Modelo.
+-- Marcas de Vehículos que empiecen por T y terminen en a.
+-- Vehículos que tengan foto.
+-- El consumo de los vehículos está expresado en litros/1OOkm. Listar el consumo de los vehículos 'Seat' en MPG, Millas por galón (10 MPG=23.52 l/1OOkm).
+-- Mostrar los vehículos, ordenados por consumo, que cumplan que tienen un consumo menor de 4, sus emisiones son menores que 110, que no tengan imagen y que no sean de la marca Volkswagen
+-- Mostrar todos los vehículos y añadir una columna que indique 'Poco contaminante' si las emisiones son <110. 'Bastante contaminante' si el consumo es entre 110 y 150. Utilizar else para el resto indicando 'No comprar, atentado ecológico' .
+-- Crear una consulta cualquier limitando el número de registros.
+-- Modifica la sentencia anterior para que salga un número de registros a partir de un número de registros especificado.
+-- Utilizar subconsultas para obtener:
+-- Los datos de los vehículos cuyo consumo sea menor que el consumo del coche con ID 25
+-- Los datos de los vehículos cuyas emisiones sea mayor o igual que las emisiones del vehículo con ID 25 y al mismo tiempo cuyo consumo sea menor que 6
+-- Muestra el coche que más contamina
+-- Muestra el coche con el mínimo consumo
+-- Muestra si el coche con el ID 53 tiene un consumo mayor que el que tienen los coches con unas emisiones mayores 150
